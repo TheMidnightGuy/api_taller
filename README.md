@@ -25,19 +25,28 @@ El proyecto integra un flujo completo de MLOps:
 
 ### Pasos
 
-**1 — Descargar la imagen desde GHCR**
+**1 — Clonar el repositorio**
+
+```bash
+git clone https://github.com/TheMidnightGuy/api_taller.git
+cd api_taller
+```
+
+**2 — Descargar la imagen desde GHCR**
 
 ```bash
 docker pull ghcr.io/themidnightguy/api_taller:latest
 ```
 
-**2 — Levantar el contenedor**
+**3 — Levantar el contenedor**
+
+Desde la raíz del repositorio clonado:
 
 ```bash
 docker run -d --name api_taller -p 4000:4000 ghcr.io/themidnightguy/api_taller:latest
 ```
 
-**3 — Verificar que está corriendo**
+**4 — Verificar que está corriendo**
 
 ```bash
 docker ps
@@ -49,23 +58,23 @@ CONTAINER ID   IMAGE                                      STATUS         PORTS
 xxxxxxxxxxxx   ghcr.io/themidnightguy/api_taller:latest  Up X seconds   0.0.0.0:4000->4000/tcp
 ```
 
-**4 — Acceder a la API**
+**5 — Acceder a la API**
 
 ```
 Swagger UI:  http://localhost:4000/docs
 Endpoint:    POST http://localhost:4000/predict
 Health:      GET  http://localhost:4000/
 
-Puedes probar con http://127.0.0.1:4000/ igualmente
+Alternativa: http://127.0.0.1:4000/docs
 ```
 
-**5 — Detener el contenedor**
+**6 — Detener el contenedor**
 
 ```bash
 docker stop api_taller
 ```
 
-**6 — Eliminar el contenedor (opcional)**
+**7 — Eliminar el contenedor (opcional)**
 
 ```bash
 docker rm api_taller
