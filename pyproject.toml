@@ -1,5 +1,5 @@
 [project]
-name = "desafio-mlops"
+name = "api_taller"
 version = "0.1.0"
 description = "Proyecto desarrollado en base a los requerimientos solicitados por el cliente considerando las condiciones especiales declaradas. Se desarrolla una API a partir de FastAPI la cual consume datos de un modelo predictivo entrenado con data historica. Devuelve el tiempo en semanas que tardaría un vehículo en entrar y salir del taller mecánico."
 authors = [
