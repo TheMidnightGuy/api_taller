@@ -34,10 +34,7 @@ docker pull ghcr.io/themidnightguy/api_taller:latest
 **2 — Levantar el contenedor**
 
 ```bash
-docker run -d \
-  --name api_taller \
-  -p 4000:4000 \
-  ghcr.io/themidnightguy/api_taller:latest
+docker run -d --name api_taller -p 4000:4000 ghcr.io/themidnightguy/api_taller:latest
 ```
 
 **3 — Verificar que está corriendo**
