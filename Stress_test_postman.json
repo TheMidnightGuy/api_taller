@@ -1,0 +1,134 @@
+{
+	"id": "2702d238-c0b8-4c33-a121-b34653f619b2",
+	"name": "API_Taller_Predicciones",
+	"timestamp": "2026-03-09T06:41:07.734Z",
+	"collection_id": "53021978-33af4653-ca89-4411-9d65-cbf5fe4c5e9a",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 40,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-03-09T06:39:06.192Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "16675ec2-0c3a-4f48-800b-e788cfe09073",
+			"name": "prediccion_semanas_postman",
+			"url": "http://127.0.0.1:4000/predict",
+			"time": 12011,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status 200": true,
+				"Response tiene claim_id": true,
+				"Response tiene prediccion_semanas": true,
+				"Tiempo de respuesta registrado": true
+			},
+			"testPassFailCounts": {
+				"Status 200": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Response tiene claim_id": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Response tiene prediccion_semanas": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Tiempo de respuesta registrado": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				12013,
+				12012,
+				12012,
+				12012,
+				12012,
+				12012,
+				12012,
+				12011,
+				12012,
+				12011
+			],
+			"allTests": [
+				{
+					"Status 200": true,
+					"Response tiene claim_id": true,
+					"Response tiene prediccion_semanas": true,
+					"Tiempo de respuesta registrado": true
+				},
+				{
+					"Status 200": true,
+					"Response tiene claim_id": true,
+					"Response tiene prediccion_semanas": true,
+					"Tiempo de respuesta registrado": true
+				},
+				{
+					"Status 200": true,
+					"Response tiene claim_id": true,
+					"Response tiene prediccion_semanas": true,
+					"Tiempo de respuesta registrado": true
+				},
+				{
+					"Status 200": true,
+					"Response tiene claim_id": true,
+					"Response tiene prediccion_semanas": true,
+					"Tiempo de respuesta registrado": true
+				},
+				{
+					"Status 200": true,
+					"Response tiene claim_id": true,
+					"Response tiene prediccion_semanas": true,
+					"Tiempo de respuesta registrado": true
+				},
+				{
+					"Status 200": true,
+					"Response tiene claim_id": true,
+					"Response tiene prediccion_semanas": true,
+					"Tiempo de respuesta registrado": true
+				},
+				{
+					"Status 200": true,
+					"Response tiene claim_id": true,
+					"Response tiene prediccion_semanas": true,
+					"Tiempo de respuesta registrado": true
+				},
+				{
+					"Status 200": true,
+					"Response tiene claim_id": true,
+					"Response tiene prediccion_semanas": true,
+					"Tiempo de respuesta registrado": true
+				},
+				{
+					"Status 200": true,
+					"Response tiene claim_id": true,
+					"Response tiene prediccion_semanas": true,
+					"Tiempo de respuesta registrado": true
+				},
+				{
+					"Status 200": true,
+					"Response tiene claim_id": true,
+					"Response tiene prediccion_semanas": true,
+					"Tiempo de respuesta registrado": true
+				}
+			]
+		}
+	],
+	"count": 10,
+	"totalTime": 120119,
+	"collection": {
+		"requests": [
+			{
+				"id": "16675ec2-0c3a-4f48-800b-e788cfe09073",
+				"method": "POST"
+			}
+		]
+	}
+}
