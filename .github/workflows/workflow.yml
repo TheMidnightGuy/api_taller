@@ -9,8 +9,43 @@ env:
     IMAGE_NAME: themidnightguy/api_taller
 
 jobs:
-    #JOB-N1 - Build y push imagen a GHCR
+    #JOB-N1 - Setup inicial
+    setup-runner:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            packages: write
+            attestations: write
+            id-token: write
+
+        steps:
+        #checkout
+        - name: Chequeo de código
+          uses: actions/checkout@v4
+        #Poetry cache on runner
+        - name: Cache Poetry
+          uses: actions/cache@v4
+          with:
+            path: ~/.cache/pypoetry
+            key: ${{runner.os}}-poetry-${{hashFiles('**/poetry.lock')}}
+            restore-keys: |
+                ${{runner.os}}-poetry
+        #Python
+        - name: Python SetUp
+          uses: actions/setup-python@v4
+          with:
+            python-version: "3.12.0"
+
+        #Poetry
+        - name: Poetry setup
+          run: pip install poetry
+        #Dependencias
+        - name: Instalar dependencias
+          run: poetry install --no-interaction --no-ansi
+
+    #JOB-N2 - Build y push imagen a GHCR
     Build-Push-GHCR:
+        needs: setup-runner
         runs-on: ubuntu-latest
         permissions:
             contents: read
